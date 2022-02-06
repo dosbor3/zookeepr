@@ -60,7 +60,7 @@ app.get('/api/animals', (req, res) => {
   });
 
 app.listen(PORT, () => {        //tell it to listen, step 2
-    console.log("API server now on port 3001!");    //chaining ther listen method onto our server to make our server listen, now run npm start in the terminal
+    console.log("API server now on port ${PORT}!");    //chaining ther listen method onto our server to make our server listen, now run npm start in the terminal
 })
 
 /*
