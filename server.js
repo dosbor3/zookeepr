@@ -4,7 +4,6 @@ const {animals} = require("./data/animals");
 
 const PORT = process.env.PORT || 3001;
 
-
 //2 step process to set up the server, instantiate the server, then tell it to listen for requests
 const app = express();  //Instantiate the server, step 1
 
