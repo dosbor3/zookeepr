@@ -51,7 +51,7 @@ function filterByQuery(query, animalsArray) {
     return filteredResults;
   }
 
-app.get("/api/animals", (req, res) => {
+app.get('/api/animals', (req, res) => {
     let results = animals;
     if (req.query) {
         results = filterByQuery(req.query, results);
@@ -60,8 +60,9 @@ app.get("/api/animals", (req, res) => {
   });
 
 app.listen(PORT, () => {        //tell it to listen, step 2
-    console.log("API server now on port ${PORT}!");    //chaining ther listen method onto our server to make our server listen, now run npm start in the terminal
-})
+    console.log(`API server now on port ${PORT}!`);    //chaining ther listen method onto our server to make our server listen, now run npm start in the terminal
+});
+
 
 /*
 Let's start by creating a route that the front-end can request data from. Start by requiring the data by adding the following code to the top of server.js:
