@@ -51,7 +51,7 @@ function filterByQuery(query, animalsArray) {
     return filteredResults;
   }
 
-app.get('/api/animals', (req, res) => {
+app.get("/api/animals", (req, res) => {
     let results = animals;
     if (req.query) {
         results = filterByQuery(req.query, results);
