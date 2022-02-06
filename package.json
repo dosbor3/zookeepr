@@ -20,5 +20,6 @@
   "homepage": "https://github.com/dosbor3/zookeepr#readme",
   "dependencies": {
     "express": "^4.17.2"
-  }
+  },
+  "devDependencies": {}
 }
