@@ -1,10 +1,10 @@
-const express = require("express"); //Always required when adding npm packages
+const express = require("express"); //Remember to always use require when adding npm packages, and express is a npm package
 
 const {animals} = require("./data/animals");
 
 
-//2 step process to set up the server, instantiate the server, the tell it to listen for requests
-const app = express();  //Instantiate the server
+//2 step process to set up the server, instantiate the server, then tell it to listen for requests
+const app = express();  //Instantiate the server, step 1
 
 // app.get("/api/animals", (req, res) => {
 //     res.json(animals);
@@ -57,7 +57,7 @@ app.get('/api/animals', (req, res) => {
     res.json(results);
   });
 
-app.listen(3001, () => {
+app.listen(3001, () => {        //tell it to listen, step 2
     console.log("API server now on port 3001!");    //chaining ther listen method onto our server to make our server listen, now run npm start in the terminal
 })
 
