@@ -50,6 +50,11 @@ function filterByQuery(query, animalsArray) {
     return filteredResults;
   }
 
+  const findById = (id, animalsArray) => {
+      const result = animalsArray.filter(animal => animal.id === id)[0];
+      return result;
+  }
+
 app.get('/api/animals', (req, res) => {
     let results = animals;
     if (req.query) {
@@ -57,6 +62,16 @@ app.get('/api/animals', (req, res) => {
       }
     res.json(results);
   });
+
+  app.get('/api/animals/:id', (req, res) => {
+    const result = findById(req.params.id, animals);
+    if (result) {
+        res.json(result);
+    }
+    else {
+        res.send(404);
+    }
+});      
 
 app.listen(PORT, () => {        //tell it to listen, step 2
     console.log(`API server now on port ${PORT}!`);    //chaining ther listen method onto our server to make our server listen, now run npm start in the terminal
