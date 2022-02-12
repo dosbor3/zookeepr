@@ -150,6 +150,15 @@
     },
     {
       "id": "16"
+    },
+    {
+      "name": "Danielle",
+      "species": "homo sapien",
+      "diet": "vegan",
+      "personalityTraits": [
+        "happy"
+      ],
+      "id": "17"
     }
   ]
 }
